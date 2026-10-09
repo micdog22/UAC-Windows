@@ -1,4 +1,4 @@
-# uacctl — Ajuste centralizado do UAC (Windows)
+# uacctl: Ajuste centralizado do UAC (Windows)
 
 **Autor:** MicDog (Michael Douglas)  
 **Licença:** MIT
@@ -6,10 +6,10 @@
 Ferramenta de console para **padronizar o nível do UAC** em estações Windows.  
 Suporta:
 
-- `--status` — mostra valores atuais e interpretação
-- `--never-notify` — aplica o nível *Nunca notificar* (UAC ativo, sem prompts)
-- `--full-disable` — **desativa completamente** o UAC (`EnableLUA=0`) — *requer reinício*
-- `--rollback` — restaura valores recomendados (prompts padrão)
+- `--status`: mostra valores atuais e interpretação
+- `--never-notify`: aplica o nível *Nunca notificar* (UAC ativo, sem prompts)
+- `--full-disable`: **desativa completamente** o UAC (`EnableLUA=0`); *requer reinício*
+- `--rollback`: restaura valores recomendados (prompts padrão)
 
 > **Aviso**: Este utilitário **não** burla o UAC e **não** eleva privilégios por conta própria.  
 > Ele apenas grava chaves de política quando **executado como Administrador**.
@@ -79,7 +79,7 @@ uacctl --rollback
 
 ## Segurança e impactos
 
-- **Nunca notificar** reduz proteção — avalie o risco.
+- **Nunca notificar** reduz proteção. Avalie o risco.
 - **Desativar totalmente** (EnableLUA=0) reduz ainda mais e **quebra aplicativos UWP**.  
   Use apenas quando for absolutamente necessário.
 - Para reverter, use `--rollback` e reinicie caso tenha usado `--full-disable` antes.
@@ -88,6 +88,6 @@ uacctl --rollback
 
 ## Créditos
 
-- MicDog (Michael Douglas) — idealização e autoria
+- MicDog (Michael Douglas): idealização e autoria
 - Windows Registry / políticas oficiais do UAC
 
